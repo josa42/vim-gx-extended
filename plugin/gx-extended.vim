@@ -25,7 +25,8 @@ function! OpenLine()
     endif
   endfor
 
-  call netrw#BrowseX(netrw#GX(), netrw#CheckIfRemote(netrw#GX()))
-endfunction
+  let gx = netrw#GX()
+  let remote = 'https?://' =~ netrw#CheckIfRemote(ex)
 
-nnoremap <silent> gx :call OpenLine()<cr>
+  call netrw#BrowseX(gx, remote)
+endfunction
