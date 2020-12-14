@@ -1,4 +1,6 @@
-# Vim Gx Extended
+# Vim Opener
+
+Enhancements for `gf`, `gF` and `gx`
 
 ## License
 
